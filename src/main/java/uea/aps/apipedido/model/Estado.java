@@ -1,10 +1,14 @@
 package uea.aps.apipedido.model;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class Estado {
 	private Integer id;
 	private String nome;
+	
+	private Set<Cidade> cidades = new HashSet<>();
 	
 	public Estado() {
 		super();
@@ -30,6 +34,14 @@ public class Estado {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public Set<Cidade> getCidades() {
+		return cidades;
+	}
+
+	public void setCidades(Set<Cidade> cidades) {
+		this.cidades = cidades;
 	}
 
 	@Override

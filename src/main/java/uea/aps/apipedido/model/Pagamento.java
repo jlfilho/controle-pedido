@@ -8,6 +8,8 @@ public class Pagamento {
 	private Integer id;
 	private EstadoPedido estado;
 	
+	private Pedido pedido;
+	
 	public Pagamento() {
 		super();
 	}
@@ -32,6 +34,14 @@ public class Pagamento {
 
 	public void setEstado(EstadoPedido estado) {
 		this.estado = estado;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 
 	@Override

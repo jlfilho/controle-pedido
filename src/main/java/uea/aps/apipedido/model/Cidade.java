@@ -6,6 +6,8 @@ public class Cidade {
 	private Integer id;
 	private String nome;
 	
+	private Estado estado;
+	
 	public Cidade() {
 		super();
 	}
@@ -30,6 +32,16 @@ public class Cidade {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	
+
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
 
 	@Override

@@ -4,11 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Categoria {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	
-	private List<Produto> produtos = new ArrayList<>();
+	
+	//private List<Produto> produtos = new ArrayList<>();
 	
 	public Categoria() {
 		super();
@@ -36,13 +46,13 @@ public class Categoria {
 		this.nome = nome;
 	}
 
-	public List<Produto> getProdutos() {
+/*	public List<Produto> getProdutos() {
 		return produtos;
 	}
 
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
-	}
+	} */
 
 	@Override
 	public int hashCode() {

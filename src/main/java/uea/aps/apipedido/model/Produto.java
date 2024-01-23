@@ -1,8 +1,10 @@
 package uea.aps.apipedido.model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class Produto {
 	private Integer id;
@@ -10,6 +12,7 @@ public class Produto {
 	private Double preco;
 	
 	private List<Categoria> categorias = new ArrayList<>();
+	private Set<ItemPedido> itens = new HashSet<>();
 	
 	public Produto() {
 		super();
@@ -52,6 +55,14 @@ public class Produto {
 
 	public void setCategorias(List<Categoria> categorias) {
 		this.categorias = categorias;
+	}
+
+	public Set<ItemPedido> getItens() {
+		return itens;
+	}
+
+	public void setItens(Set<ItemPedido> itens) {
+		this.itens = itens;
 	}
 
 	@Override

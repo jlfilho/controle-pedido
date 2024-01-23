@@ -10,6 +10,10 @@ public class Endereco {
 	private String bairro;
 	private String cep;
 	
+	private Cidade cidade;
+	private Cliente cliente;
+	private Pedido pedido;
+	
 	public Endereco() {
 		super();
 	}
@@ -70,6 +74,30 @@ public class Endereco {
 
 	public void setCep(String cep) {
 		this.cep = cep;
+	}
+
+	public Cidade getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(Cidade cidade) {
+		this.cidade = cidade;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 
 	@Override

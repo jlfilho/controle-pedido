@@ -14,6 +14,10 @@ public class Cliente {
 	private TipoCliente tipo;
 	
 	private List<String> telefones = new ArrayList<>();
+	private List<Endereco> enderecos = new ArrayList<>();
+	private List<Pedido> pedidos = new ArrayList<>();
+	
+	
 	
 	public Cliente() {
 		super();
@@ -66,6 +70,30 @@ public class Cliente {
 
 	public void setTipo(TipoCliente tipo) {
 		this.tipo = tipo;
+	}
+
+	public List<String> getTelefones() {
+		return telefones;
+	}
+
+	public void setTelefones(List<String> telefones) {
+		this.telefones = telefones;
+	}
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
+	}
+
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
 	}
 
 	@Override
