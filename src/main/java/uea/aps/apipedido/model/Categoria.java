@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Categoria {
@@ -17,8 +18,8 @@ public class Categoria {
 	private Integer id;
 	private String nome;
 	
-	
-	//private List<Produto> produtos = new ArrayList<>();
+	@ManyToMany(mappedBy="categorias")
+	private List<Produto> produtos = new ArrayList<>();
 	
 	public Categoria() {
 		super();

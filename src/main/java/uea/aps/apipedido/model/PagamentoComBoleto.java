@@ -2,8 +2,10 @@ package uea.aps.apipedido.model;
 
 import java.time.Instant;
 
+import jakarta.persistence.Entity;
 import uea.aps.apipedido.model.enums.EstadoPedido;
 
+@Entity
 public class PagamentoComBoleto extends Pagamento {
 	private Instant dataVencimento;
 	private Instant dataPagamento;

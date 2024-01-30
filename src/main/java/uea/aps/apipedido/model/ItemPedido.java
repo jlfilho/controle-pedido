@@ -2,7 +2,13 @@ package uea.aps.apipedido.model;
 
 import java.util.Objects;
 
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+
+@Entity
 public class ItemPedido {
+	
+	@EmbeddedId
 	private ItemPedidoPK id = new ItemPedidoPK();
 	
 	private Double desconto;

@@ -1,7 +1,9 @@
 package uea.aps.apipedido.model;
 
+import jakarta.persistence.Entity;
 import uea.aps.apipedido.model.enums.EstadoPedido;
 
+@Entity
 public class PagamentoComCartao extends Pagamento {
 	private Integer numeroDeParcelas;
 

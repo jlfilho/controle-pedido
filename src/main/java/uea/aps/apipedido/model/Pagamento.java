@@ -2,12 +2,30 @@ package uea.aps.apipedido.model;
 
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.MapsId;
+import jakarta.persistence.OneToOne;
 import uea.aps.apipedido.model.enums.EstadoPedido;
 
+@Entity
+@Inheritance(strategy=InheritanceType.JOINED)
 public class Pagamento {
+	
+	@Id
 	private Integer id;
+	
+	@Enumerated(EnumType.STRING)
 	private EstadoPedido estado;
 	
+	@OneToOne
+	@JoinColumn(name="pedido_id")
+	@MapsId
 	private Pedido pedido;
 	
 	public Pagamento() {

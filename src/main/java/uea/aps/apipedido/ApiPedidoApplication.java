@@ -28,9 +28,9 @@ public class ApiPedidoApplication implements CommandLineRunner {
 		Produto p2 = new Produto(2, "Teclado", 140.00);
 		Produto p3 = new Produto(3, "Monitor", 1800.00);
 		
-		c1.getProdutos().add(p1);
+		/*c1.getProdutos().add(p1);
 		c1.getProdutos().add(p2);
-		c1.getProdutos().add(p3);
+		c1.getProdutos().add(p3);*/
 		
 		//System.out.println(c1.getId()+" - " + c1.getNome());
 		//System.out.println(c2.getId()+" - " + c2.getNome());
@@ -40,10 +40,10 @@ public class ApiPedidoApplication implements CommandLineRunner {
 		
 		System.out.println(c1.getId()+" - " + c1.getNome());
 		
-		for (Produto p : c1.getProdutos()) {
+		/*for (Produto p : c1.getProdutos()) {
 			System.out.println("\t" + p.getId()+" - " 
 		+ p.getNome() + " -" + p.getPreco());
-		}
+		}*/
 		
 		
 	}
